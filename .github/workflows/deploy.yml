@@ -1,4 +1,4 @@
-name: Deploy to Server
+name: Deploy on Push
 
 on:
   push:
@@ -11,18 +11,16 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Deploy via SSH
-  uses: appleboy/ssh-action@v1.0.0
-  with:
-    host: ${{ secrets.SSH_HOST }}
-    username: ${{ secrets.SSH_USER }}
-    key: ${{ secrets.SSH_PRIVATE_KEY }}
-    port: 22
-    script: |
-      cd /var/www/pterodactyl
-      export NODE_OPTIONS=--openssl-legacy-provider
-      yarn install
-      yarn build:production
-
+      - name: Deploy to server
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /var/www/pterodactyl
+            export NODE_OPTIONS=--openssl-legacy-provider
+            yarn install
+            yarn build:production
