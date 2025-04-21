@@ -3,6 +3,7 @@
 !.env.ci
 !.env.example
 .env*
+git_push.sh
 .vagrant/*
 .vscode/*
 storage/framework/*
