@@ -1,0 +1,1 @@
+../../../../../.blueprint/extensions/mclogs/wrappers/dashboard.blade.php

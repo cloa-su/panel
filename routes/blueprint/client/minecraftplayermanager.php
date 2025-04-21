@@ -1,0 +1,1 @@
+../../../.blueprint/extensions/minecraftplayermanager/routers/client.php

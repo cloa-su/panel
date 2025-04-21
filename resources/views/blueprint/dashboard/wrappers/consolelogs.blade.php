@@ -1,0 +1,1 @@
+../../../../../.blueprint/extensions/consolelogs/wrappers/dashboard.blade.php
