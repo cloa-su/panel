@@ -18,10 +18,8 @@
 
 ## 📦 Использованные технологии
 
-- **Серверная часть:** <a herf="https://pterodactyl.io>Pterodactyl</a>  
-- **Интерфейс:** Blueprint (`blueprint.zip`)  
-- **База данных:** MySQL 8.0  
-- **Кэширование:** Redis  
+- **Серверная часть:** [Pterodactyl](https://pterodactyl.io) 
+- **Framework:** [Blueprint](https://Blueprint.zip) 
 
 ---
 
